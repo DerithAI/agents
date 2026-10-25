@@ -79,6 +79,16 @@ Small native-install registries are committed for tools that support that route.
 - **Pi**: `.pi/agents/<plugin>__<agent>.md` in the reference `subagent` extension's format (name, description, tools, model); commands become prompt templates at `.pi/prompts/<plugin>__<cmd>.md`
 - **Cursor**: reads `.claude/agents/` directly
 
+## Cursor Cloud specific instructions
+
+Cloud Agent VMs bootstrap via the environment **install** script (not repeated on every boot when using environment builds). After checkout on a branch with different dependencies, refresh with:
+
+```bash
+cd plugins/plugin-eval && uv sync --all-extras && cd ../.. && make generate-all
+```
+
+Run quality gates from the repo root with `make lint`, `make validate STRICT=1`, `make garden`, and `make test`. Use `make generate HARNESS=<harness>` for a single harness; use `make generate-all` before committing plugin source changes. Ruff and ty must run from `plugins/plugin-eval/` (via `make lint`) — do not invoke ruff from the repo root. Optional YouTube extractor tooling lives under `tools/yt-design-extractor/` (`make install` there); it is not required for marketplace work. No long-running dev server is required for this repository.
+
 ## Why this file is short
 
 Per OpenAI's harness-engineering practice: this file is a **map**, not an encyclopedia. Procedural detail lives in skills (loaded on demand by agents). Reference material lives in `docs/` (loaded when an agent navigates). A single bloated AGENTS.md crowds out the task, rots quickly, and is hard to verify mechanically. Keep it lean; push detail elsewhere.
