@@ -138,8 +138,8 @@ gh skill publish --dry-run
 DISABLE_TELEMETRY=1 npx skills add . --list -y
 
 # From GitHub, as a user would
-gh skill install wshobson/agents python-testing-patterns --dir /tmp/gh-skill-check
-npx skills add wshobson/agents --skill python-testing-patterns --list
+gh skill install DerithAI/agents python-testing-patterns --dir /tmp/gh-skill-check
+npx skills add DerithAI/agents --skill python-testing-patterns --list
 ```
 
 ### Cursor (no CLI)

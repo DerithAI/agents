@@ -37,7 +37,7 @@ The repository shares agents, skills, and commands across seven AI coding tools.
 ### Plugin Distribution
 
 - **94 marketplace plugins** (92 local + 2 external via git-subdir) optimized for specific use cases
-- **Skills-only distribution** through `gh skill install wshobson/agents` and `npx skills add wshobson/agents`, which read `plugins/*/skills/` directly (see [harnesses.md](./harnesses.md#skills-only-installers))
+- **Skills-only distribution** through `gh skill install DerithAI/agents` and `npx skills add DerithAI/agents`, which read `plugins/*/skills/` directly (see [harnesses.md](./harnesses.md#skills-only-installers))
 - **26 clear categories** with 1-10 plugins each for easy discovery
 - Organized by domain:
   - **Development**: 6 plugins (debugging, backend, frontend, UI, multi-platform, essentials)

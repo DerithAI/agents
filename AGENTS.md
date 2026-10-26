@@ -28,6 +28,7 @@ AGENTS.md is the canonical context file. Codex, Cursor, OpenCode, Antigravity CL
 - Python tooling: **uv** (package manager), **ruff** (lint/format), **ty** (type check). Do not use pip / mypy / black.
 - Plugins live under `plugins/<name>/` with auto-discovery — see `docs/authoring.md` for frontmatter shapes.
 - Plugin names: lowercase, hyphen-separated. Never use `__` (it's the adapter namespace separator).
+- This checkout is DerithAI/agents, an owned divergence from wshobson/agents. Keep the `plugins/` marketplace layout.
 - Never commit secrets. Never run destructive git (force-push, `reset --hard`, branch -D) without explicit ask.
 
 ## Quality gates (run these before pushing)
@@ -66,7 +67,7 @@ Small native-install registries are committed for tools that support that route.
 - **Antigravity CLI**: native plugins at `.antigravity/plugins/<p>/` — bare `skills/<skill>/SKILL.md` (no `<plugin>__` namespacing; the plugin dir already scopes it)
 - **GitHub Copilot**: mirrored to `.copilot/skills/<plugin>__<skill>/`. Commands also become user-invocable skills.
 - **Pi**: mirrored to `.pi/skills/<plugin>/<skill>/`; discovery is recursive so names stay bare
-- **Skills-only installers**: `gh skill install wshobson/agents` and `npx skills add wshobson/agents` read `plugins/*/skills/` from GitHub directly (see `docs/harnesses.md`); `make smoke-test` runs both plus the agentskills.io spec check
+- **Skills-only installers**: `gh skill install DerithAI/agents` and `npx skills add DerithAI/agents` read `plugins/*/skills/` from GitHub directly (see `docs/harnesses.md`); `make smoke-test` runs both plus the agentskills.io spec check
 
 ## Subagents (cross-harness)
 

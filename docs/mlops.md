@@ -1,5 +1,7 @@
 # MLOps Lab Pipeline
 
+This page describes the original Major7 lab that shipped with `wshobson/agents`. DerithAI/agents does not operate those W&B, Hugging Face, or Actions accounts, and it does not store those credentials.
+
 This document covers the end-to-end MLOps pipeline for the Major 7 lab:
 experiment tracking on W&B, model/dataset storage on Hugging Face, and the
 GitHub Actions glue that ties them together.
