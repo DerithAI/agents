@@ -3,6 +3,8 @@
 <a id="agentic-plugin-marketplace"></a>
 <a id="claude-code-plugins-agents-and-skills"></a>
 
+DerithAI maintains this repository at [DerithAI/agents](https://github.com/DerithAI/agents). It began as a copy of [wshobson/agents](https://github.com/wshobson/agents) and is now an owned project that will diverge from that catalog on purpose. Commands in this README install from `DerithAI/agents`. The marketplace layout under `plugins/` stays as it is, so the same harness installers still apply. Seth Hobson wrote the original catalog; this copy remains MIT licensed. GitHub may still label the repository as a fork until an owner leaves the fork network in repository settings.
+
 Use one collection of plugins, agents, skills, and commands across Claude Code, OpenAI Codex CLI, Cursor, OpenCode, Antigravity CLI, GitHub Copilot, and Pi. A harness is the coding tool that loads and runs the components. Plugins cover Python and JavaScript development, code review, testing, infrastructure, security, and other work.
 
 The catalog contains 94 plugins, including 92 local plugins and 2 external entries. The local source contains 202 agents, 185 skills, and 105 commands. The components share a Markdown source, with installation and capabilities adapted to each harness.
@@ -43,7 +45,7 @@ See the [plugin catalog](docs/plugins.md) for all 94 plugins and the [usage guid
 Run these commands inside Claude Code to register the marketplace and install the Python development plugin:
 
 ```text
-/plugin marketplace add wshobson/agents
+/plugin marketplace add DerithAI/agents
 /plugin install python-development@claude-code-workflows
 ```
 
@@ -58,7 +60,7 @@ Then ask Claude to use the Python agents for your task, or run the plugin's scaf
 Run these commands in a terminal with a current Codex CLI:
 
 ```bash
-codex plugin marketplace add wshobson/agents
+codex plugin marketplace add DerithAI/agents
 codex plugin add python-development@claude-code-workflows
 ```
 
@@ -76,8 +78,8 @@ Cursor uses the committed [plugin marketplace registry](.cursor-plugin/marketpla
 Install an individual skill with GitHub CLI's `gh skill` command or the `npx skills` installer. Select your coding tool when prompted. Both installers read skills from GitHub without cloning the repository and install them without the plugin's agents, commands, or hooks.
 
 ```bash
-gh skill install wshobson/agents python-testing-patterns
-npx skills add wshobson/agents --skill python-testing-patterns
+gh skill install DerithAI/agents python-testing-patterns
+npx skills add DerithAI/agents --skill python-testing-patterns
 ```
 
 `gh skill` requires GitHub CLI 2.90 or later. The `npx` command requires Node.js and npm. See [skills-only installation](docs/harnesses.md#skills-only-installers) for other agents, install scopes, and version pinning.
@@ -90,7 +92,7 @@ npx skills add wshobson/agents --skill python-testing-patterns
 For OpenCode, Antigravity CLI, GitHub Copilot, and Pi, clone the repository and use the installer for your harness. Install [uv](https://docs.astral.sh/uv/getting-started/installation/), Python 3.12 or later, and the coding tool you want to use. The following clone command uses GitHub CLI:
 
 ```bash
-gh repo clone wshobson/agents ~/agents
+gh repo clone DerithAI/agents ~/agents
 cd ~/agents
 ```
 
@@ -156,7 +158,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to propose a change and [authoring conven
 
 ## External memory integration
 
-[Pensyve](https://github.com/major7apps/pensyve) remains an optional external Claude Code marketplace entry. Major7 Apps maintains Pensyve, and this repository's maintainer founded Major7 Apps. Its open-source runtime can run locally or on your own server. [Pensyve Cloud closed on October 1, 2026](https://pensyve.com/), and its dashboard, API, and hosted MCP endpoints are unavailable. Use the [self-hosting guide](https://github.com/major7apps/pensyve/blob/main/docs/self-host.md) when configuring the runtime.
+[Pensyve](https://github.com/major7apps/pensyve) remains an optional external Claude Code marketplace entry carried over from the original catalog. Major7 Apps maintains Pensyve. Seth Hobson, the maintainer of [wshobson/agents](https://github.com/wshobson/agents), founded Major7 Apps. Pensyve's open-source runtime can run locally or on your own server. [Pensyve Cloud closed on October 1, 2026](https://pensyve.com/), and its dashboard, API, and hosted MCP endpoints are unavailable. Use the [self-hosting guide](https://github.com/major7apps/pensyve/blob/main/docs/self-host.md) when configuring the runtime.
 
 ## License
 
@@ -164,4 +166,4 @@ The repository is [MIT licensed](LICENSE). External plugins have their own licen
 
 ## Star history
 
-[![Star History Chart](https://star-history.dera.page/svg?repos=wshobson/agents&type=date&legend=top-left)](https://star-history.dera.page/#wshobson/agents&type=date&legend=top-left)
+[![Star History Chart](https://star-history.dera.page/svg?repos=DerithAI/agents&type=date&legend=top-left)](https://star-history.dera.page/#DerithAI/agents&type=date&legend=top-left)

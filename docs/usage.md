@@ -18,7 +18,7 @@ Use the installed Python testing skill to add pytest coverage for this endpoint'
 
 In Claude Code, a plugin is the unit of installation. It includes its agents, commands, and skills. Other tools use the installation routes in the [setup guide](./harnesses.md#native-install).
 
-1. `/plugin marketplace add wshobson/agents` registers the catalog. It loads
+1. `/plugin marketplace add DerithAI/agents` registers the catalog. It loads
    nothing into context.
 2. `/plugin install <plugin>` installs one plugin — its agents, commands, and
    skills together. Install the 2–3 plugins that cover your domain, not
@@ -28,8 +28,8 @@ In Claude Code, a plugin is the unit of installation. It includes its agents, co
    matches a skill's description. You never select skills by hand.
 4. `AGENTS.md` and the `docs/` catalogs are for browsing what exists; reading
    them installs nothing.
-5. **Skills only, any agent.** `gh skill install wshobson/agents <skill>` and
-   `npx skills add wshobson/agents --skill <skill>` install one skill, without
+5. **Skills only, any agent.** `gh skill install DerithAI/agents <skill>` and
+   `npx skills add DerithAI/agents --skill <skill>` install one skill, without
    its plugin's agents or commands, into Claude Code or any other agent the
    installer supports. See [harnesses.md](./harnesses.md#skills-only-installers).
 

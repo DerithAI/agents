@@ -364,7 +364,7 @@ The marketplace commands in this section run inside Claude Code. Other tools use
 ### Step 1: Add the Marketplace
 
 ```bash
-/plugin marketplace add wshobson/agents
+/plugin marketplace add DerithAI/agents
 ```
 
 This makes all 94 marketplace plugins available for installation, but **does not load any agents or tools** into your context.
@@ -391,8 +391,8 @@ Installing a Claude Code plugin makes its agents, commands, and skills available
 To take one skill without its plugin, use an Agent Skills installer. Both read `plugins/*/skills/` from GitHub directly and install into Claude Code or any other agent they support:
 
 ```bash
-gh skill install wshobson/agents python-testing-patterns --agent claude-code   # GitHub CLI 2.90+
-npx skills add wshobson/agents --skill python-testing-patterns -a claude-code  # vercel-labs/skills
+gh skill install DerithAI/agents python-testing-patterns --agent claude-code   # GitHub CLI 2.90+
+npx skills add DerithAI/agents --skill python-testing-patterns -a claude-code  # vercel-labs/skills
 ```
 
 Selectors, install paths, and gotchas: [harnesses.md](./harnesses.md#skills-only-installers).

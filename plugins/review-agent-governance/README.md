@@ -99,7 +99,7 @@ approval window for those. Other limits:
 ## Installation
 
 ```bash
-claude plugin install wshobson/agents/review-agent-governance
+claude plugin install DerithAI/agents/review-agent-governance
 ```
 
 Copy the default policy into your project:

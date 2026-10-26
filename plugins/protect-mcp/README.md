@@ -23,7 +23,7 @@ with the public key.
 
 ```bash
 # 1. Install this plugin
-claude plugin install wshobson/agents/protect-mcp
+claude plugin install DerithAI/agents/protect-mcp
 
 # 2. Create a Cedar policy file at ./protect.cedar
 #    (see skills/protect-mcp-setup/SKILL.md for examples)

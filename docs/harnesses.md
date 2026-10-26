@@ -110,7 +110,7 @@ leave everything else under `.pi/` alone.
 
 ## Native install
 
-- **Codex**. Run `codex plugin marketplace add wshobson/agents`, then
+- **Codex**. Run `codex plugin marketplace add DerithAI/agents`, then
   `codex plugin add python-development@claude-code-workflows` (or choose another plugin
   with source skills). The native registry includes only local plugins with a
   `skills/<name>/SKILL.md` source file; agent-only and command-only plugins use the generated
@@ -152,16 +152,16 @@ generate step. They carry skills only: no agents, commands, or hooks.
 
 ```bash
 # gh skill: lists as `[plugins] <plugin>/<skill>`, selects by bare skill name or exact path
-gh skill install wshobson/agents                                     # interactive browse
-gh skill install wshobson/agents python-testing-patterns
-gh skill install wshobson/agents plugins/python-development/skills/python-testing-patterns  # exact path skips the tree walk
-gh skill install wshobson/agents --all --agent claude-code --scope user
-gh skill install wshobson/agents python-testing-patterns --pin <sha>
+gh skill install DerithAI/agents                                     # interactive browse
+gh skill install DerithAI/agents python-testing-patterns
+gh skill install DerithAI/agents plugins/python-development/skills/python-testing-patterns  # exact path skips the tree walk
+gh skill install DerithAI/agents --all --agent claude-code --scope user
+gh skill install DerithAI/agents python-testing-patterns --pin <sha>
 
 # npx skills: lists and selects by bare skill name
-npx skills add wshobson/agents --list
-npx skills add wshobson/agents --skill python-testing-patterns -a claude-code
-npx skills add wshobson/agents --all -g
+npx skills add DerithAI/agents --list
+npx skills add DerithAI/agents --skill python-testing-patterns -a claude-code
+npx skills add DerithAI/agents --all -g
 ```
 
 Gotchas:

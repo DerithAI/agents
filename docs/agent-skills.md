@@ -5,8 +5,8 @@ Agent Skills provide specialized guidance for AI coding agents using the shared 
 Install a skill on its own into a tool supported by the Agent Skills installers:
 
 ```bash
-gh skill install wshobson/agents <skill>              # GitHub CLI 2.90+
-npx skills add wshobson/agents --skill <skill>        # vercel-labs/skills
+gh skill install DerithAI/agents <skill>              # GitHub CLI 2.90+
+npx skills add DerithAI/agents --skill <skill>        # vercel-labs/skills
 ```
 
 Naming, pinning, and gotchas: [harnesses.md](./harnesses.md#skills-only-installers).
