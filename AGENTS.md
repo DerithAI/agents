@@ -87,7 +87,7 @@ Cloud Agent VMs bootstrap via the environment **install** script (not repeated o
 cd plugins/plugin-eval && uv sync --all-extras && cd ../.. && make generate-all
 ```
 
-Run quality gates from the repo root with `make lint`, `make validate STRICT=1`, `make garden`, and `make test`. Use `make generate HARNESS=<harness>` for a single harness; use `make generate-all` before committing plugin source changes. Ruff and ty must run from `plugins/plugin-eval/` (via `make lint`) — do not invoke ruff from the repo root. Optional YouTube extractor tooling lives under `tools/yt-design-extractor/` (`make install` there); it is not required for marketplace work. No long-running dev server is required for this repository.
+Run quality gates from the repo root with `make lint`, `make validate STRICT=1`, `make garden`, `make test`, and `make smoke-test`. Use `make generate HARNESS=<harness>` for a single harness; use `make generate-all` before committing plugin source changes. Ruff and ty must run from `plugins/plugin-eval/` (via `make lint`) — do not invoke ruff from the repo root. Optional YouTube extractor tooling lives under `tools/yt-design-extractor/` (`make install` from the repo root, or `uv sync` there); it is not required for marketplace work. No long-running dev server is required for this repository.
 
 ## Why this file is short
 
